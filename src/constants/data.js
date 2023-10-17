@@ -1,8 +1,8 @@
-import images from "./images";
+import images from "./image";
 
 const data = {
   user: {
-    name: "Tuatta",
+    name: "NghiaDT",
     img: images.avt,
   },
   summary: [

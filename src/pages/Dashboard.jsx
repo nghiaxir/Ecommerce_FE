@@ -1,8 +1,16 @@
 import React from 'react'
+import DashboardWrapper, { DashboardWrapperMain, DashboardWrapperRight } from '../components/DashBoardWrapper/DashBoardWrapper'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <DashboardWrapper>
+      <DashboardWrapperMain>
+        DashboardMain
+      </DashboardWrapperMain>
+      <DashboardWrapperRight>
+        DashboardRight
+      </DashboardWrapperRight>
+    </DashboardWrapper>
   )
 }
 
