@@ -9,6 +9,15 @@ const Sidebar = () => {
     const [activeIndev, setActiveIndex] = useState(0)
     const location = useLocation()
 
+    const closeSidebar = () => {
+        document.querySelector('.main__content').style.transform = 'scale(1) translateX(0)'
+        setTimeout(() => {
+            document.body.classList.remove('sidebar-open')
+            document.querySelector('.main__content').style = ''
+        }, 500);
+    }
+
+
     useEffect(() => {
         const curPath = window.location.pathname.split('/')[1]
         const activeItem = sidebarNav.findIndex(item => item.section === curPath)
@@ -18,7 +27,7 @@ const Sidebar = () => {
         <div className='sidebar'>
             <div className='sidebar__logo'>
                 <img src={images.logo} alt=''/>
-                <div className="sidebar-close">
+                <div className="sidebar-close" onClick={closeSidebar}>
                     <i className='bx bx-x'></i>
                 </div>
             </div>

@@ -16,6 +16,8 @@ import {
     Legend
 } from 'chart.js'
 import SummaryBox, { SummaryBoxSpecial } from '../components/Summary/SummaryBox'
+import OverallList from '../components/OverallList/OverallList'
+import RevenueList from '../components/RevenueList/RevenueList'
 
 ChartJS.register(
     CategoryScale,
@@ -55,7 +57,14 @@ const Dashboard = () => {
         </div>
       </DashboardWrapperMain>
       <DashboardWrapperRight>
-        DashboardRight
+        <div className='title mb'>Overall</div>
+        <div className="title mb">
+          <OverallList />
+        </div>
+        <div className='title mb'>Revenue by channel</div>
+        <div className="title mb">
+          <RevenueList />
+        </div>
       </DashboardWrapperRight>
     </DashboardWrapper>
   )
